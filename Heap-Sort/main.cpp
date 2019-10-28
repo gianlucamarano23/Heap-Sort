@@ -19,77 +19,57 @@
 #include <vector>
 #include <numeric>
 
-class Pippo{
-private:
-    int num;
-    std::string str;
-public:
-    Pippo(int val, std::string inpt): num(val), str(inpt){};
-    std::string getStr(){
-        return  str;
-    };
-};
-    
 
-void heapify(int arr[], int n, int i)
+void heapify(std::vector<int>& input, int n, int i)
 {
    // Find largest among root, left child and right child
    int largest = i;
    int l = 2*i + 1;
    int r = 2*i + 2;
-   if (l < n && arr[l] > arr[largest])
+   if (l < n && input.at(l) > input.at(largest))
      largest = l;
-   if (r < n && arr[r] > arr[largest])
+   if (r < n && input.at(r) > input.at(largest))
      largest = r;
    // Swap and continue heapifying if root is not largest
    if (largest != i)
    {
-     std::swap(arr[i], arr[largest]);
-     heapify(arr, n, largest);
+     std::swap(input.at(i), input.at(largest));
+     heapify(input, n, largest);
    }
 }
 // main function to do heap sort
-void heapSort(int arr[], int n)
+void heapSort(std::vector<int>& input)
 {
+    int len = static_cast<int>(input.size());
    // Build max heap
-   for (int i = n / 2 - 1; i >= 0; i--)
-     heapify(arr, n, i);
+   for (int i = len / 2 - 1; i >= 0; i--)
+     heapify(input, len, i);
    // Heap sort
-   for (int i=n-1; i>=0; i--)
+   for (int i=len-1; i>=0; i--)
    {
-     std::swap(arr[0], arr[i]);
-     
+     std::swap(input.at(0), input.at(i));
      // Heapify root element to get highest element at root again
-     heapify(arr, i, 0);
+     heapify(input, i, 0);
    }
 }
-void printArray(int arr[], int n)
+void print(std::vector<int>& input)
 {
-   for (int i=0; i<n; ++i)
-     std::cout << arr[i] << " ";
-   std::cout << "\n";
+    auto print = [](int& elem) { std::cout<<elem<<" "; };
+
+    std::for_each(input.begin(), input.end(), print);
+    std::cout<<std::endl;
 }
-
-
 
 int main()
 {
-    std::shared_ptr<Pippo> ptr1 = std::make_shared<Pippo>(3, "pippo");
-    std::cout<<ptr1.use_count()<<std::endl;
-    std::shared_ptr<Pippo> ptr2 = ptr1;
-    std::cout<<ptr2.use_count()<<std::endl;
-    ptr1.reset();
-    std::cout<<ptr2.use_count()<<std::endl;
     
-    std::cout<<"============================"<<std::endl;
-    
-    int arr[] = {1,12,9,5,6,10};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    heapSort(arr, n);
-    std::cout << "Sorted array is \n";
-    printArray(arr, n);
-
-
+    std::vector<int> vect{1,12,9,5,6,10};
+    print(vect);
+    heapSort(vect);
+    std::cout << "Number sequence after sorting ::\n";
+    print(vect);
     return 0;
     
 }
+
+
