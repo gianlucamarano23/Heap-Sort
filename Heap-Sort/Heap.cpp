@@ -27,14 +27,19 @@ void Heap::heapify(std::vector<int>& input, int n, int i)
    }
 }
 
+void Heap::buildMaxHeap(std::vector<int>& input){
+    // Build max heap
+    int len = static_cast<int>(input.size());
+    for (int i = len / 2 - 1; i >= 0; i--)
+      heapify(input, len, i);
+}
+
 
 // main function to do heap sort
 void Heap::heapSort(std::vector<int>& input)
 {
     int len = static_cast<int>(input.size());
-   // Build max heap
-   for (int i = len / 2 - 1; i >= 0; i--)
-     heapify(input, len, i);
+    buildMaxHeap(input);
    // Heap sort
    for (int i=len-1; i>=0; i--)
    {

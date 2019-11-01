@@ -23,7 +23,7 @@
 int main()
 {
     Heap heap;
-    std::vector<int> vect{1,12,9,5,6,10};
+    std::vector<int> vect{1,12,9,5,6,10,56,98,23,43,14,65,90};
     heap.print(vect);
     heap.heapSort(vect);
     std::cout << "Number sequence after sorting ::"<<std::endl;

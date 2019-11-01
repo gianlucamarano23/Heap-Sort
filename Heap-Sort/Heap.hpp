@@ -25,6 +25,8 @@ public:
     
 private:
     void heapify(std::vector<int>& input, int n, int i);
+    void buildMaxHeap(std::vector<int>& input);
+
 
 };
 
