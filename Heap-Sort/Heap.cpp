@@ -9,20 +9,20 @@
 #include "Heap.hpp"
 
 
-void Heap::heapify(std::vector<int>& input, int n, int i)
+void Heap::heapify(std::vector<int>& input, int n, int index)
 {
    // Find largest among root, left child and right child
-   int largest = i;
-   int l = 2*i + 1;
-   int r = 2*i + 2;
-   if (l < n && input.at(l) > input.at(largest))
-     largest = l;
-   if (r < n && input.at(r) > input.at(largest))
-     largest = r;
+   int largest = index;
+   int left = 2*index + 1;
+   int right = 2*index + 2;
+   if (left < n && input.at(left) > input.at(largest))
+     largest = left;
+   if (right < n && input.at(right) > input.at(largest))
+     largest = right;
    // Swap and continue heapifying if root is not largest
-   if (largest != i)
+   if (largest != index)
    {
-     std::swap(input.at(i), input.at(largest));
+     std::swap(input.at(index), input.at(largest));
      heapify(input, n, largest);
    }
 }
