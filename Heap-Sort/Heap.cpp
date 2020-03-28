@@ -1,10 +1,20 @@
+/****************************************************************************/
 //
-//  Heap.cpp
-//  Heap-Sort
+//  main.cpp
+//  Project: heap Sort
 //
-//  Created by GianLuka23 on 28/10/2019.
+//  Created by GianLuka23 on 18/10/2019.
 //  Copyright © 2019 MacBook. All rights reserved.
+//  insert here description and complexity analysis of heap sort algorithm
 //
+/****************************************************************************/
+/// @file    main.cpp
+/// @author  Gianluca Marano
+/// @date    20.10.2019
+///
+// C++ main.cpp implementation
+/****************************************************************************/
+
 
 #include "Heap.hpp"
 

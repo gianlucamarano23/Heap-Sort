@@ -1,0 +1,24 @@
+gianluca23:Heap-Sort macbook$ ls -lta
+total 24
+drwxr-xr-x  5 macbook  staff   160 28 Mar 17:41 .
+-rw-r--r--@ 1 macbook  staff  1893  3 Nov 20:43 Heap.cpp
+-rw-r--r--@ 1 macbook  staff  1161  3 Nov 20:43 main.cpp
+-rw-r--r--@ 1 macbook  staff   953  3 Nov 20:43 Heap.hpp
+drwxr-xr-x@ 6 macbook  staff   192  1 Nov 23:51 ..
+gianluca23:Heap-Sort macbook$ g++ -std=c++11 -c -Wall -g Heap.cpp 
+gianluca23:Heap-Sort macbook$ g++ -std=c++11 -c -Wall -g main.cpp 
+gianluca23:Heap-Sort macbook$ ls -lta 
+total 528
+drwxr-xr-x  7 macbook  staff     224 28 Mar 17:42 .
+-rw-r--r--  1 macbook  staff  135612 28 Mar 17:42 main.o
+-rw-r--r--  1 macbook  staff  114884 28 Mar 17:42 Heap.o
+-rw-r--r--@ 1 macbook  staff    1893  3 Nov 20:43 Heap.cpp
+-rw-r--r--@ 1 macbook  staff    1161  3 Nov 20:43 main.cpp
+-rw-r--r--@ 1 macbook  staff     953  3 Nov 20:43 Heap.hpp
+drwxr-xr-x@ 6 macbook  staff     192  1 Nov 23:51 ..
+gianluca23:Heap-Sort macbook$ g++ -std=c++11 -g Heap.o main.o -o output 
+gianluca23:Heap-Sort macbook$ ./output 
+1 12 9 5 6 10 56 98 23 43 14 65 90 
+Number sequence after sorting ::
+1 5 6 9 10 12 14 23 43 56 65 90 98 
+
