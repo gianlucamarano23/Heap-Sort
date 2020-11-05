@@ -18,11 +18,11 @@
 #include <fstream>
 #include <vector>
 #include <numeric>
-#include "Heap.hpp"
+#include "../include/Heap.hpp"
 
 int main()
 {
-    
+
     /** @brief Replaces index with all possible elements. The condition "end-i+1 >= r-index" makes sure that, by including one element at a time, we guarantee to perform all the combinations with the remaining elements at remaining positions
        */
     Heap heap;
@@ -32,7 +32,5 @@ int main()
     std::cout << "Number sequence after sorting ::"<<std::endl;
     heap.print(vect);
     return 0;
-    
+
 }
-
-

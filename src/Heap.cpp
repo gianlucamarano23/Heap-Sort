@@ -16,7 +16,7 @@
 /****************************************************************************/
 
 
-#include "Heap.hpp"
+#include "../include/Heap.hpp"
 
 
 void Heap::heapify(std::vector<int>& input, int dim, int index)
