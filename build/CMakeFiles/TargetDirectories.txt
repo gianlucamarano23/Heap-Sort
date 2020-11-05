@@ -1,0 +1,3 @@
+/Users/macbook/macbook-docu/workspaceXcode/Heap-Sort/build/CMakeFiles/rebuild_cache.dir
+/Users/macbook/macbook-docu/workspaceXcode/Heap-Sort/build/CMakeFiles/edit_cache.dir
+/Users/macbook/macbook-docu/workspaceXcode/Heap-Sort/build/CMakeFiles/sample.dir
