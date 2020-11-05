@@ -1,4 +1,4 @@
+build/
 sample
 output
 *.o
-build/
