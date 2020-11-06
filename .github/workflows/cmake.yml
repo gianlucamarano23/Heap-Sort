@@ -1,6 +1,10 @@
 name: CMake
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
@@ -18,11 +22,12 @@ jobs:
     strategy:
       matrix:
         include:
+
           - os: ubuntu-latest
             TARGET: armv7-unknown-linux-musleabihf
             COMPILER: arm-linux-gnueabihf-gcc-5
             LINKER: gcc-5-arm-linux-gnueabihf
-    
+
           #- os: macos-latest
           #  TARGET: x86_64-apple-darwin
           #  COMPILER: clang
