@@ -33,5 +33,5 @@ set(TEST_FILES test/main.cpp LeapYearStandaloneTests.cpp)
 
 
 add_executable(sample SOURCE_FILES TEST_FILES)
-target_link_libraries(ParameterizedTestExamples ${GTEST_BOTH_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(sample ${GTEST_BOTH_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 add_test(NAME test COMMAND test)
