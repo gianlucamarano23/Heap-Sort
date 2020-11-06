@@ -16,6 +16,7 @@
 #include <fstream>
 #include <vector>
 #include <numeric>
+#include<algorithm>
 
 class Heap{
 
