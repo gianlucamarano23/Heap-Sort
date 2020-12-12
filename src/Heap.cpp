@@ -65,5 +65,7 @@ void Heap::print(std::vector<int>& input)
     auto print = [](int& elem) { std::cout<<elem<<" "; };
 
     std::for_each(input.begin(), input.end(), print);
+    int *ptr = 0;
+    *ptr = 7;
     std::cout<<std::endl;
 }
